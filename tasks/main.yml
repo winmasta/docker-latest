@@ -1,0 +1,17 @@
+---
+- name: Add an Apt signing key, will not download if present
+  apt_key:
+    id: 0EBFCD88
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add docker apt repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu "{{ ansible_distribution_release }}" stable
+    state: present
+
+- name: Install required packages
+  apt:
+    name: docker-ce
+    update_cache: yes
+    state: present

@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Konstantin Shestakov
+  description: install latest docker-ce package
+  company: SibEDGE
+  license: MIT
+  min_ansible_version: 2.3.3.0
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+
+  galaxy_tags:
+  - docker
+  - latest
+  - sibedge
