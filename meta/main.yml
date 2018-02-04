@@ -1,6 +1,6 @@
 galaxy_info:
   author: Konstantin Shestakov
-  description: install latest docker-ce package and docker-compose
+  description: install latest docker-ce, docker compose packages and docker-py, docker-compose python modules
   company: SibEDGE
   license: MIT
   min_ansible_version: 2.3.3.0
