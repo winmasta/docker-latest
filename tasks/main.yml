@@ -15,3 +15,9 @@
     name: docker-ce
     update_cache: yes
     state: present
+
+- name: Download docker-compose binary
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ DOCKER_COMPOSE_VER }}/docker-compose-{{ ansible_system }}-{{ ansible_machine }}"
+    dest: "{{ DOCKER_COMPOSE_FILE }}"
+    mode: 0755

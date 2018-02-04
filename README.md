@@ -1,7 +1,7 @@
 DOCKER-LATEST
 =========
 
-Ansible role for latest docker-ce. Tested on:
+Ansible role for latest docker-ce and docker-compose desired version. Tested on:
 - Ubuntu 14.04 Trusty
 - Ubuntu 16.04 Xenial
 
@@ -11,6 +11,12 @@ Requirements
 Installed OS:
  - Ubuntu 14.04 Trusty
  - Ubuntu 16.04 Xenial
+
+ Role Variables
+ --------------
+
+ - DOCKER_COMPOSE_VER: 1.18.0 # Desired docker-compose version
+ - DOCKER_COMPOSE_FILE: /usr/local/bin/docker-compose # Docker-compose binary location
 
 Example Playbook
 ----------------
