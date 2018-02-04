@@ -15,6 +15,15 @@
     name: docker-ce
     update_cache: yes
     state: present
+  with_items:
+    - docker-ce
+    - python-pip
+
+- name: Install required python modules
+  pip:
+    name:
+      - docker-py
+      - docker-compose
 
 - name: Download docker-compose binary
   get_url:
