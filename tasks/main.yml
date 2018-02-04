@@ -1,5 +1,5 @@
 ---
-- name: Add an Apt signing key, will not download if present
+- name: Add an apt signing key
   apt_key:
     id: 0EBFCD88
     url: https://download.docker.com/linux/ubuntu/gpg
@@ -15,3 +15,9 @@
     name: docker-ce
     update_cache: yes
     state: present
+
+- name: Download docker-compose binary
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ DOCKER_COMPOSE_VER }}/docker-compose-{{ ansible_system }}-{{ ansible_machine }}"
+    dest: "{{ DOCKER_COMPOSE_FILE }}"
+    mode: 0755

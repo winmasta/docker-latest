@@ -1,6 +1,6 @@
 galaxy_info:
   author: Konstantin Shestakov
-  description: install latest docker-ce package
+  description: install latest docker-ce package and docker-compose
   company: SibEDGE
   license: MIT
   min_ansible_version: 2.3.3.0
@@ -14,4 +14,5 @@ galaxy_info:
   galaxy_tags:
   - docker
   - latest
+  - docker-compose
   - sibedge
