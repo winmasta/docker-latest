@@ -21,6 +21,7 @@
 
 - name: Upgrade pip
   shell: pip install --upgrade pip
+  changed_when: False
 
 - name: Install docker python module
   pip:
