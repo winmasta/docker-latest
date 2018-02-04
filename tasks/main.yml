@@ -19,11 +19,16 @@
     - docker-ce
     - python-pip
 
-- name: Install required python modules
+- name: Upgrade pip
+  shell: pip install --upgrade pip
+
+- name: Install docker python module
   pip:
-    name:
-      - docker-py
-      - docker-compose
+    name: docker
+
+- name: Install docker-compose python module
+  pip:
+    name: docker-compose
 
 - name: Download docker-compose binary
   get_url:
