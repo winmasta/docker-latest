@@ -1,7 +1,7 @@
 DOCKER-LATEST
 =========
 
-Ansible role for latest docker-ce and docker-compose desired version. Also docker-py and docker-compose python modules
+Ansible role for latest docker-ce and docker-compose desired version. Also docker and docker-compose python modules
 will be installed. Tested on:
 - Ubuntu 14.04 Trusty
 - Ubuntu 16.04 Xenial
